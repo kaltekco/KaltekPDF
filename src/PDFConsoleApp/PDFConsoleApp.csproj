@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="pexels-photo-254770.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="pexels-photo-254770.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kaltek.PDF.SkiaSharp\Kaltek.PDF.SkiaSharp.csproj" />
+  </ItemGroup>
+
+</Project>
