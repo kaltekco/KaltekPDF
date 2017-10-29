@@ -10,9 +10,9 @@ namespace Kaltek.PDF.SkiaSharp.Renderers
 {
     internal class PageRenderer : IRenderer
     {
-        private readonly Page _page;
+        private readonly PdfPage _page;
 
-        public PageRenderer(Page page)
+        public PageRenderer(PdfPage page)
         {
             _page = page;
         }
@@ -42,16 +42,16 @@ namespace Kaltek.PDF.SkiaSharp.Renderers
             {
                 switch (control)
                 {
-                    case Header header:
+                    case PdfHeader header:
                          RenderHeader(canvas, bounds, header);
                         break;
-                    case Footer footer:
+                    case PdfFooter footer:
                         RenderFooter(canvas, bounds, footer);
                         break;
-                    case Table table:
+                    case PdfTable table:
                         RenderTable(canvas, table);
                         break;
-                    case Image image:
+                    case PdfImage image:
                         RenderImage(canvas, image);
                         break;
                     default:
@@ -60,19 +60,19 @@ namespace Kaltek.PDF.SkiaSharp.Renderers
             }
         }
 
-        private void RenderImage(SKCanvas canvas, Image image)
+        private void RenderImage(SKCanvas canvas, PdfImage image)
         {
             var renderer = new ImageRenderer(image);
             renderer.Render(canvas);
         }
 
-        private void RenderTable(SKCanvas canvas, Table table)
+        private void RenderTable(SKCanvas canvas, PdfTable table)
         {
             var renderer = new TableRenderer(table);
             renderer.Render(canvas);
         }
 
-        private static void RenderHeader(SKCanvas canvas, SKRect bounds, Header header)
+        private static void RenderHeader(SKCanvas canvas, SKRect bounds, PdfHeader header)
         {
             int headerHeight = header.Height;
             var headerRect = new SKRect(bounds.Left, bounds.Top, bounds.Right, bounds.Top + headerHeight);
@@ -80,7 +80,7 @@ namespace Kaltek.PDF.SkiaSharp.Renderers
             renderer.Render(canvas);
         }
 
-        private static void RenderFooter(SKCanvas canvas, SKRect bounds, Footer footer)
+        private static void RenderFooter(SKCanvas canvas, SKRect bounds, PdfFooter footer)
         {
             int headerHeight = footer.Height;
             var headerRect = new SKRect(bounds.Left, bounds.Bottom - headerHeight, bounds.Right, bounds.Bottom);

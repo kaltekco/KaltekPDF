@@ -4,11 +4,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
+using Kaltek.Drawing;
+
 namespace Kaltek.PDF
 {
-    public class TableCell
+    public class PdfTableCell
     {
-        public TableCell(TableRow row, object data, string dataFormat, bool suppressIfZero)
+        public PdfTableCell(PdfTableRow row, object data, string dataFormat, bool suppressIfZero)
         {
             Row = row;
             Data = data;
@@ -29,7 +31,7 @@ namespace Kaltek.PDF
 
         public int Width { get; set; }
 
-        public TableRow Row { get; }
+        public PdfTableRow Row { get; }
 
         public object Data { get; }
 

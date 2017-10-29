@@ -6,12 +6,12 @@ using System.Text;
 
 namespace Kaltek.PDF
 {
-    public class TableRow
+    public class PdfTableRow
     {
-        public TableRow(Table table)
+        public PdfTableRow(PdfTable table)
         {
             Table = table;
-            Cells = new List<TableCell>();
+            Cells = new List<PdfTableCell>();
             BackColor = Color.White;
             BorderColor = Color.Black;
             BorderWidth = 0;
@@ -21,9 +21,9 @@ namespace Kaltek.PDF
 
         public int Width { get; set; }
 
-        public Table Table { get; }
+        public PdfTable Table { get; }
 
-        public List<TableCell> Cells { get; set; }
+        public List<PdfTableCell> Cells { get; set; }
 
         public int BorderWidth { get; set; }
 
@@ -31,7 +31,7 @@ namespace Kaltek.PDF
 
         public Color BackColor { get; set; }
 
-        public void AddCell(TableCell cell)
+        public void AddCell(PdfTableCell cell)
         {
             Cells.Add(cell);
         }

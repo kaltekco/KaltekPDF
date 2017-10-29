@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
-namespace Kaltek.PDF
+namespace Kaltek.Drawing
 {
     public class Font
     {

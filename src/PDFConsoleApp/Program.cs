@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
+using Kaltek.Drawing;
 using Kaltek.PDF;
 using Kaltek.PDF.SkiaSharp;
 
@@ -21,7 +22,7 @@ namespace PDFConsoleApp
 
             PageDimensions dimensions = new PageDimensions(PaperType.Letter, PageOrientation.Portrait);
 
-            Page page = new Page(dimensions)
+            var page = new PdfPage(dimensions)
             {
                 BorderColor = Color.DarkGray,
                 BorderWidth = 2
@@ -33,7 +34,7 @@ namespace PDFConsoleApp
 
             PageDimensions dim2 = new PageDimensions(PaperType.Letter, PageOrientation.Landscape);
 
-            page = new Page(dim2)
+            page = new PdfPage(dim2)
             {
                 BorderColor = Color.Red,
                 BorderWidth = 3
@@ -47,9 +48,9 @@ namespace PDFConsoleApp
             doc.Save($@"C:\Development\Tests\HelloWorld_{DateTime.Now:yyyyMMdd_hhmm_tt}.pdf");
         }
 
-        private static void AddImage(Page page)
+        private static void AddImage(PdfPage page)
         {
-            var image = new Image(@"pexels-photo-254770.jpg")
+            var image = new PdfImage(@"pexels-photo-254770.jpg")
             {
                 Left = 100,
                 Top = 200,
@@ -60,16 +61,16 @@ namespace PDFConsoleApp
             page.PageElements.Add(image);
         }
 
-        private static void AddHeaderAndFooter(Page page)
+        private static void AddHeaderAndFooter(PdfPage page)
         {
-            Header header = new Header(page)
+            var header = new PdfHeader(page)
             {
                 LeftText = "Hello",
                 CenterText = $"{DateTime.Today:MM/dd/yyyy}",
                 RightText = "World"
             };
 
-            Footer footer = new Footer(page)
+            var footer = new PdfFooter(page)
             {
                 LeftText = $"Page 1",
                 CenterText = "VER 1.0",
@@ -80,23 +81,23 @@ namespace PDFConsoleApp
             page.PageElements.Add(footer);
         }
 
-        private static void AddTestTable(Page page)
+        private static void AddTestTable(PdfPage page)
         {
-            Table table = new Table(page, 10, 100);
+            var table = new PdfTable(page, 10, 100);
 
-            TableCell cell;
-            TableRow row;
+            PdfTableCell cell;
+            PdfTableRow row;
 
             for (int i = 0; i < 3; i++)
             {
-                row = new TableRow(table);
+                row = new PdfTableRow(table);
 
                 if (i == 2)
                 {
                     row.BackColor = Color.FromArgb(246, 246, 255);
                 }
 
-                cell = new TableCell(row, 123456.78, "{0:#,####.00}", true)
+                cell = new PdfTableCell(row, 123456.78, "{0:#,####.00}", true)
                 {
                     Font = new Font
                     {
@@ -120,7 +121,7 @@ namespace PDFConsoleApp
                     text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
                 }
 
-                cell = new TableCell(row, text, string.Empty, false)
+                cell = new PdfTableCell(row, text, string.Empty, false)
                 {
                     Font = new Font
                     {
@@ -144,7 +145,7 @@ namespace PDFConsoleApp
 
                 row.AddCell(cell);
 
-                cell = new TableCell(row, "World", string.Empty, false)
+                cell = new PdfTableCell(row, "World", string.Empty, false)
                 {
                     Font = new Font
                     {

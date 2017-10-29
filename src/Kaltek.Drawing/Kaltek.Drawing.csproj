@@ -4,8 +4,4 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Kaltek.Drawing\Kaltek.Drawing.csproj" />
-  </ItemGroup>
-
 </Project>

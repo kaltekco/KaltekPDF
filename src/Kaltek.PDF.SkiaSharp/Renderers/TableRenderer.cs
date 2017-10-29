@@ -8,14 +8,14 @@ namespace Kaltek.PDF.SkiaSharp.Renderers
 {
     internal class TableRenderer : IRenderer
     {
-        private readonly Table _table;
+        private readonly PdfTable _table;
         private readonly int _left;
         private readonly int _top;
         private readonly SKPaint _linePaint;
 
         private List<RowRenderer> _rowRenderer = new List<RowRenderer>();
 
-        public TableRenderer(Table table)
+        public TableRenderer(PdfTable table)
         {
             _table = table;
             _left = table.Left;

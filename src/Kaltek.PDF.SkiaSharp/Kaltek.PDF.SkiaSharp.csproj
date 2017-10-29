@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Kaltek.Drawing.SkiaSharp\Kaltek.Drawing.SkiaSharp.csproj" />
     <ProjectReference Include="..\Kaltek.PDF\Kaltek.PDF.csproj" />
   </ItemGroup>
 

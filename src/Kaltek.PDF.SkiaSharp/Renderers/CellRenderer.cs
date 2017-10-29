@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using SkiaSharp;
 
-using Kaltek.PDF;
+using Kaltek.Drawing;
 using Kaltek.PDF.SkiaSharp.Extensions;
 
 namespace Kaltek.PDF.SkiaSharp.Renderers
@@ -21,7 +21,7 @@ namespace Kaltek.PDF.SkiaSharp.Renderers
         private List<CellItem> _cellItems = new List<CellItem>();
         private SKPaint _textPaint;
 
-        public CellRenderer(TableCell cell)
+        public CellRenderer(PdfTableCell cell)
         {
             Cell = cell;
             
@@ -34,7 +34,7 @@ namespace Kaltek.PDF.SkiaSharp.Renderers
             };
         }
 
-        public TableCell Cell { get; }
+        public PdfTableCell Cell { get; }
 
         public int Left { get; set; }
 

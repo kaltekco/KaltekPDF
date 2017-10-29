@@ -5,12 +5,12 @@ using System.Text;
 
 namespace Kaltek.PDF
 {
-    public class Image : IPageElement
+    public class PdfImage : IPageElement
     {
         private readonly string _path;
         private byte[] _data;
 
-        public Image(string path)
+        public PdfImage(string path)
         {
             _path = path;
 
@@ -20,12 +20,12 @@ namespace Kaltek.PDF
             }
         }
 
-        public Image(byte[] data)
+        public PdfImage(byte[] data)
         {
             _data = data;
         }
 
-        public Image (Stream stream)
+        public PdfImage (Stream stream)
         {
             _data = new byte[stream.Length];
             stream.Read(_data, 0, _data.Length);

@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
 
+using Kaltek.Drawing;
+
 namespace Kaltek.PDF
 {
-    public abstract class HeaderFooterBase : IPageElement
+    public abstract class PdfHeaderFooterBase : IPageElement
     {
-        public HeaderFooterBase(Page page)
+        public PdfHeaderFooterBase(PdfPage page)
         {
             Page = page;
             Height = (int)Page.Dimensions.ConvertUnits(0.5f, UnitOfMeasure.Inch, UnitOfMeasure.Point);
             Color = Color.CadetBlue;
             Font = new Font
             {
-                FontFamily = "Times New Roman",
+                FontFamily = Fonts.TimesNewRoman,
                 TextSize = 8,
             };
         }
@@ -31,7 +33,7 @@ namespace Kaltek.PDF
 
         public Color Color { get; set; }
 
-        public Page Page { get; private set; }
+        public PdfPage Page { get; private set; }
 
         public int BorderWidth { get; set; }
 

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Kaltek.PDF
 {
-    public class Footer : HeaderFooterBase
+    public class PdfFooter : PdfHeaderFooterBase
     {
-        public Footer(Page page) : base(page)
+        public PdfFooter(PdfPage page) : base(page)
         {
         }
     }

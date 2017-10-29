@@ -6,25 +6,25 @@ using System.Text;
 
 namespace Kaltek.PDF
 {
-    public class Table : IPageElement
+    public class PdfTable : IPageElement
     {
-        public Table(Page page, int left, int top)
+        public PdfTable(PdfPage page, int left, int top)
         {
             Page = page;
             Left = left;
             Top = top;
             BorderColor = Color.Black;
             BorderWidth = 1;
-            Rows = new List<TableRow>();
+            Rows = new List<PdfTableRow>();
         }
 
-        public Page Page { get; }
+        public PdfPage Page { get; }
 
         public int Left { get; }
 
         public int Top { get; }
 
-        public List<TableRow> Rows { get; set; }
+        public List<PdfTableRow> Rows { get; set; }
 
         public Color BorderColor { get; set; }
 

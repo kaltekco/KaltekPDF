@@ -8,10 +8,10 @@ namespace Kaltek.PDF.SkiaSharp.Renderers
 {
     public class HeaderFooterRenderer
     {
-        private readonly HeaderFooterBase _header;
+        private readonly PdfHeaderFooterBase _header;
         private readonly SKRect _bounds;
 
-        public HeaderFooterRenderer(HeaderFooterBase header, SKRect bounds)
+        public HeaderFooterRenderer(PdfHeaderFooterBase header, SKRect bounds)
         {
             _header = header;
             _bounds = bounds;

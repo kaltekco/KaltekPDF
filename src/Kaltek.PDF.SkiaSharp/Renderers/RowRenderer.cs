@@ -13,7 +13,7 @@ namespace Kaltek.PDF.SkiaSharp.Renderers
     {
         private List<CellRenderer> _cellRenderers = new List<CellRenderer>();
 
-        public RowRenderer(TableRow row)
+        public RowRenderer(PdfTableRow row)
         {
             Row = row;
 
@@ -23,7 +23,7 @@ namespace Kaltek.PDF.SkiaSharp.Renderers
             }
         }
 
-        public TableRow Row { get; }
+        public PdfTableRow Row { get; }
 
         public int Left { get; set; }
 

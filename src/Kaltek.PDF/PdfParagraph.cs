@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
+using Kaltek.Drawing;
+
 namespace Kaltek.PDF
 {
-    public class Paragraph : IPageElement
+    public class PdfParagraph : IPageElement
     {
-        public Paragraph()
+        public PdfParagraph()
         {
             Font = Fonts.Arial;
             Color = Color.Black;

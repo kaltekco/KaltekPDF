@@ -7,9 +7,9 @@ namespace Kaltek.PDF.SkiaSharp.Renderers
 {
     internal class ImageRenderer : IRenderer
     {
-        private readonly Image _image;
+        private readonly PdfImage _image;
 
-        public ImageRenderer(Image image)
+        public ImageRenderer(PdfImage image)
         {
             _image = image;
         }

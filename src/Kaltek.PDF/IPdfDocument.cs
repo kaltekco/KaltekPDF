@@ -7,7 +7,7 @@ namespace Kaltek.PDF
 {
     public interface IPdfDocument
     {
-        List<Page> Pages { get; set; }
+        List<PdfPage> Pages { get; set; }
 
         string Author { get; set; }
 

@@ -14,7 +14,7 @@ namespace Kaltek.PDF.SkiaSharp
     {
         public PdfDocument()
         {
-            Pages = new List<Page>();
+            Pages = new List<PdfPage>();
             Author = "Kaltek";
             Creator = Author;
             Keywords = "Kaltek, PDF, SkiaSharp";
@@ -22,7 +22,7 @@ namespace Kaltek.PDF.SkiaSharp
             Title = "The PDF Document";
         }
 
-        public List<Page> Pages { get; set; }
+        public List<PdfPage> Pages { get; set; }
 
         public string Author { get; set; }
 

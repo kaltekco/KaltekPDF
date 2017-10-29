@@ -5,11 +5,11 @@ using System.Drawing;
 
 namespace Kaltek.PDF
 {
-    public class Page
+    public class PdfPage
     {
         private readonly PageDimensions _pageDimensions;
 
-        public Page(PageDimensions pageDimensions)
+        public PdfPage(PageDimensions pageDimensions)
         {
             PageElements = new List<IPageElement>();
             _pageDimensions = pageDimensions;
