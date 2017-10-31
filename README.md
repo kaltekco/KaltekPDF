@@ -1,2 +1,2 @@
 # .NET Core PDF
-.NET Core 2.0 based API to generate PDF document. Rendering implemenation is decoupled. Example implemenation using SkiaSharp.
+Serves as a starting point for creating PDF documents and charts using .NET Core 2.0 and SkiaSharp
