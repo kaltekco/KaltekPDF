@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Text;
 using SkiaSharp;
 
-namespace Kaltek.PDF.SkiaSharp.Extensions
+namespace Kaltek.SkiaSharp.Extensions
 {
     public static class SkiaExtensions
     {

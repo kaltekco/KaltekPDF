@@ -5,7 +5,7 @@ using System.Drawing;
 using System.IO;
 using SkiaSharp;
 
-using Kaltek.PDF.SkiaSharp.Extensions;
+using Kaltek.SkiaSharp.Extensions;
 using Kaltek.PDF.SkiaSharp.Renderers;
 
 namespace Kaltek.PDF.SkiaSharp

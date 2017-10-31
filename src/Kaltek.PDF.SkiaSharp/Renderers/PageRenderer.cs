@@ -3,7 +3,7 @@ using System.Text;
 using SkiaSharp;
 
 using Kaltek.PDF;
-using Kaltek.PDF.SkiaSharp.Extensions;
+using Kaltek.SkiaSharp.Extensions;
 using System;
 
 namespace Kaltek.PDF.SkiaSharp.Renderers

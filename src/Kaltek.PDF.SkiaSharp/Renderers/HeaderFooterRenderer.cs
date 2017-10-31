@@ -2,7 +2,7 @@
 using SkiaSharp;
 
 using Kaltek.PDF;
-using Kaltek.PDF.SkiaSharp.Extensions;
+using Kaltek.SkiaSharp.Extensions;
 
 namespace Kaltek.PDF.SkiaSharp.Renderers
 {

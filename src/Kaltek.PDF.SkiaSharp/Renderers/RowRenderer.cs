@@ -5,7 +5,7 @@ using System.Linq;
 using System.Drawing;
 using SkiaSharp;
 
-using Kaltek.PDF.SkiaSharp.Extensions;
+using Kaltek.SkiaSharp.Extensions;
 
 namespace Kaltek.PDF.SkiaSharp.Renderers
 {

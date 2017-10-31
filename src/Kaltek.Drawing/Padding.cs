@@ -1,4 +1,4 @@
-﻿namespace Kaltek.PDF
+﻿namespace Kaltek.Drawing
 {
     public class Padding
     {

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" Version="1.59.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kaltek.Chart\Kaltek.Chart.csproj" />
+    <ProjectReference Include="..\Kaltek.Drawing.SkiaSharp\Kaltek.Drawing.SkiaSharp.csproj" />
+  </ItemGroup>
+
+</Project>
